@@ -303,8 +303,8 @@ let pty={};try{pty=JSON.parse(localStorage.getItem('pamur4pty')||'{}')}catch(e){
 const ptySave=()=>{try{localStorage.setItem('pamur4pty',JSON.stringify(pty))}catch(e){}};
 let mob={};try{mob=JSON.parse(localStorage.getItem('pamur4mob')||'{}')}catch(e){}
 const mobSave=()=>{try{localStorage.setItem('pamur4mob',JSON.stringify(mob))}catch(e){}};
-let cst={};try{cst=JSON.parse(localStorage.getItem('pamur4cst')||'{}')}catch(e){}
-let lmk={};try{lmk=JSON.parse(localStorage.getItem('pamur4lmk')||'{}')}catch(e){}
+const CSEED4={"2983":"Muslim","3325":"Muslim","3326":"Muslim","3363":"Muslim","3364":"Muslim","3389":"Muslim","3489":"Muslim","3491":"Muslim","3507":"Muslim","3508":"Muslim","3523":"Muslim","3663":"Muslim","3664":"Muslim","3665":"Muslim","3666":"Muslim","3667":"Muslim","3668":"Muslim","3670":"Muslim","3671":"Muslim"};
+let cst=Object.assign({},(CSEED4));try{cst=Object.assign(cst,JSON.parse(localStorage.getItem('pamur4cst')||'{}'))}catch(e){}let lmk={};try{lmk=JSON.parse(localStorage.getItem('pamur4lmk')||'{}')}catch(e){}
 const cstSave=()=>{try{localStorage.setItem('pamur4cst',JSON.stringify(cst))}catch(e){}};
 const lmkSave=()=>{try{localStorage.setItem('pamur4lmk',JSON.stringify(lmk))}catch(e){}};
 const mqq=matchMedia('(max-width:720px)');let isMob=mqq.matches;mqq.addEventListener('change',()=>{isMob=mqq.matches;if($('view').value==='v')render()});
